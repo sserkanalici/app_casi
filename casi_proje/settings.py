@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'casi_proje.urls'
@@ -108,9 +108,6 @@ DATABASES = {
         'PASSWORD': 'cu35q9ic2dtl90xk',        # MySQL kullanıcı şifreniz
         'HOST': 'm60mxazb4g6sb4nn.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',        # Eğer MySQL veritabanı sunucunuz uzak bir sunucu ise burayı değiştirin
         'PORT': '3306',             # MySQL varsayılan port numarası
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
     }
 }
 
