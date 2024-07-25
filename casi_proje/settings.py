@@ -102,12 +102,13 @@ WSGI_APPLICATION = 'casi_proje.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql://fsu623saf324fv7e:cu35q9ic2dtl90xk@m60mxazb4g6sb4nn.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/p32pr2354om6ad61',
         'NAME': 'p32pr2354om6ad61',          # Veritabanı adı
         'USER': 'fsu623saf324fv7e',    # MySQL kullanıcı adınız
         'PASSWORD': 'cu35q9ic2dtl90xk',        # MySQL kullanıcı şifreniz
         'HOST': 'm60mxazb4g6sb4nn.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',        # Eğer MySQL veritabanı sunucunuz uzak bir sunucu ise burayı değiştirin
         'PORT': '3306',             # MySQL varsayılan port numarası
+        'CONN_MAX_AGE': 500
     }
 }
 
