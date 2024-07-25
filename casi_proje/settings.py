@@ -18,6 +18,9 @@ from django.utils.crypto import get_random_string
 from os import getenv
 import django_heroku
 
+import dj_database_url
+
+dj_database_url.DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 chars="abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
