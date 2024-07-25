@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f-^!sov(_b+pw@vh6d7v@y0_bl_n!-+c*duwa8%iuw7t(deau%'
+#SECRET_KEY = 'django-insecure-f-^!sov(_b+pw@vh6d7v@y0_bl_n!-+c*duwa8%iuw7t(deau%'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -108,7 +108,7 @@ DATABASES = {
         'PASSWORD': 'cu35q9ic2dtl90xk',        # MySQL kullanıcı şifreniz
         'HOST': 'm60mxazb4g6sb4nn.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',        # Eğer MySQL veritabanı sunucunuz uzak bir sunucu ise burayı değiştirin
         'PORT': '3306',             # MySQL varsayılan port numarası
-        'CONN_MAX_AGE': 500
+        # 'CONN_MAX_AGE': 500
     }
 }
 
