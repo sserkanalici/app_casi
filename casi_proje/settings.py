@@ -16,6 +16,10 @@ import whitenoise
 import whitenoise.middleware
 from django.utils.crypto import get_random_string
 from os import getenv
+import django_heroku
+
+django_heroku.settings(locals())
+
 
 chars="abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
 SECRET_KEY=get_random_string(50,chars)
