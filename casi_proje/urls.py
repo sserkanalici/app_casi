@@ -22,4 +22,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("casi/",include("casi_uyg.urls"))
-]+static(settings.STATIC_FILES,document_root=settings.STATIC_ROOT)
+]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
