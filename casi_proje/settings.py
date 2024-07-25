@@ -14,6 +14,11 @@ from pathlib import Path
 import os
 import whitenoise
 import whitenoise.middleware
+from django.utils.crypto import get_random_string
+from os import getenv
+
+chars="abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
+SECRET_KEY=get_random_string(50,chars)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,9 +29,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-f-^!sov(_b+pw@vh6d7v@y0_bl_n!-+c*duwa8%iuw7t(deau%'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv("IS_DEVELOPMENT",True)
 
 #ALLOWED_HOSTS = ['*']
 
