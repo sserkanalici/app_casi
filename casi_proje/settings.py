@@ -30,7 +30,7 @@ DEBUG = False
 
 #ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS=["https://casiuyg-0a5877f84d58.herokuapp.com/","127.0.0.1"]
+ALLOWED_HOSTS=["casiuyg-0a5877f84d58.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
