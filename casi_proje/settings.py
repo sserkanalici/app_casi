@@ -20,8 +20,6 @@ import django_heroku
 
 import dj_database_url
 
-DATABASES= dj_database_url.config(conn_max_age=600, ssl_require=True)
-
 
 chars="abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
 SECRET_KEY=get_random_string(50,chars)
@@ -39,7 +37,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #ALLOWED_HOSTS = ['*']
 
@@ -104,31 +102,31 @@ WSGI_APPLICATION = 'casi_proje.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'casibom_db',          # Veritabanı adı
-#         'USER': 'root',    # MySQL kullanıcı adınız
-#         'PASSWORD': '',        # MySQL kullanıcı şifreniz
-#         'HOST': 'localhost',        # Eğer MySQL veritabanı sunucunuz uzak bir sunucu ise burayı değiştirin
-#         'PORT': '3306',             # MySQL varsayılan port numarası
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-#         }
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'p32pr2354om6ad61',          # Veritabanı adı
-        'USER': 'fsu623saf324fv7e',    # MySQL kullanıcı adınız
-        'PASSWORD': 'cu35q9ic2dtl90xk',        # MySQL kullanıcı şifreniz
-        'HOST': 'm60mxazb4g6sb4nn.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',        # Eğer MySQL veritabanı sunucunuz uzak bir sunucu ise burayı değiştirin
+        'NAME': 'casibom_db',          # Veritabanı adı
+        'USER': 'root',    # MySQL kullanıcı adınız
+        'PASSWORD': '',        # MySQL kullanıcı şifreniz
+        'HOST': 'localhost',        # Eğer MySQL veritabanı sunucunuz uzak bir sunucu ise burayı değiştirin
         'PORT': '3306',             # MySQL varsayılan port numarası
-        # 'CONN_MAX_AGE': 500
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'p32pr2354om6ad61',          # Veritabanı adı
+#         'USER': 'fsu623saf324fv7e',    # MySQL kullanıcı adınız
+#         'PASSWORD': 'cu35q9ic2dtl90xk',        # MySQL kullanıcı şifreniz
+#         'HOST': 'm60mxazb4g6sb4nn.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',        # Eğer MySQL veritabanı sunucunuz uzak bir sunucu ise burayı değiştirin
+#         'PORT': '3306',             # MySQL varsayılan port numarası
+#         # 'CONN_MAX_AGE': 500
+#     }
+# }
 
 
 
@@ -174,8 +172,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
 os.path.join(BASE_DIR, 'static'),)
 
-# MEDIA_URL = "/media/"
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
