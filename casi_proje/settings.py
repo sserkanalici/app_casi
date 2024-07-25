@@ -37,7 +37,7 @@ DEBUG = getenv("IS_DEVELOPMENT",True)
 
 #ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS=["https://casiuyg-0a5877f84d58.herokuapp.com/","127.0.0.1"]
+ALLOWED_HOSTS=["casiuyg-0a5877f84d58.herokuapp.com"]
 
 ALLOWED_HOSTS=[
     getenv("APP_HOST")
