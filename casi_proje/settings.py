@@ -28,7 +28,7 @@ DEBUG = False
 
 #ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS=["https://casiuyg-0a5877f84d58.herokuapp.com/","127.0.0.1"]
+ALLOWED_HOSTS=["casiuyg-0a5877f84d58.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'casi_proje.urls'
