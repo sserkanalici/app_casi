@@ -18,7 +18,6 @@ from django.utils.crypto import get_random_string
 from os import getenv
 import django_heroku
 
-django_heroku.settings(locals())
 
 
 chars="abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
@@ -164,15 +163,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR/'staticfiles'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-STATIC_URL = 'static/'
 STATICFILES_DIRS = (
 os.path.join(BASE_DIR, 'static'),)
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
@@ -181,3 +181,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
